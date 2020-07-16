@@ -1,0 +1,245 @@
+<html>
+  <head>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <title>Hello World</title>
+    <style type="text/css">
+* {
+  margin: 0;
+  padding: 0;
+  touch-action: none;
+  font-family: 'Open Sans';
+  user-select: none;
+}
+
+body {
+  background-color: #FEFEFE;
+}
+
+#header-background {
+  background-color: #08599d;
+  min-height: 275;
+  max-height: 35%;
+  width: 100%;
+  cursor: pointer;
+}
+
+.nav-bar-icon {
+  color: white;
+  margin: 10 8 0 8;
+  font-size: 36;
+  text-align: center;
+  user-select: none;
+}
+
+#dp {
+  margin-top: 20%;
+  border-radius: 50%;
+  border: 1px ridge #8a795d;
+  width:  256;
+  height: 256;
+  padding: 4;
+  background-color: white;
+  height: 256;
+  user-select: none;
+}
+
+#header {
+  position: absolute;
+  width: 100%;
+  top: 0;
+}
+
+#dp-plate {display: inline-block;}
+
+#desc{
+  margin-top: 112;
+  text-align: center;
+}
+
+#name{
+  font-weight: bold;  
+  font-size: 36;
+}
+
+#status{
+  margin-top: 8;
+  font-size: 20;
+  color: grey;
+  font-weight: 500; 
+}
+
+#quote{
+  padding: 12 24;
+}
+
+.flex-row{
+  padding: 32;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: right;
+  color: black;
+}
+
+div.flex-row > img {
+  object-fit: contain;
+  max-height: 80%;
+  max-width: 30%;
+  padding: 32 48 32 32;
+}
+
+div.flex-row > p {
+  flex-grow: 2;
+  text-align: justify;
+  vertical-align: middle;
+
+}
+
+div.flex-row > div {
+  flex: 3;
+}
+
+div.flex-row:nth-child(odd) > img{
+  padding: 20 0 20 40;
+  }
+
+@media only screen and (max-width: 768px) {
+  div.flex-row {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+    padding: 32;
+  }
+
+  div.flex-row > img {
+  height: auto;
+  max-width: 80%;
+  padding: 12 0 0 0;
+  }
+
+  div.flex-row:nth-child(odd){
+  flex-direction: column-reverse;
+  padding: 0;
+  }
+
+  div.flex-row:nth-child(odd) > img{
+  padding: 20 32;
+  }
+
+  div.flex-row:nth-child(odd) > p{
+  padding: 12 32;
+  }
+
+  div.flex-row > p {
+    padding: 48 0 16 0;
+  } 
+}
+
+.goto{
+    text-align: right;
+    flex: 1;
+}
+
+.nopadding{padding:0;}
+
+.goto:hover{
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+    </style>
+  </head>
+<body onload="onLoad();">
+    <div id="header-background"></div>
+    <div id="header">
+    <table style="width:100%">
+      <tr>
+        <th align="left"><span class="material-icons nav-bar-icon">bookmark_outline</span></th>
+        <th align="right"><span class="material-icons nav-bar-icon">alternate_email</span></th>
+      </tr>
+    </table>
+    <center>
+    <div id="dp-plate">
+      <img id="dp" ondragstart="return false;" oncontextmenu="return false;" src="profile.jpg" alt="That's me"/>
+    </div>
+    </center>
+    </div>
+    <div id="desc">
+      <p id="name">Mohit Shetty</p>
+      <p id="status">An unconventional Flutter developer</p>
+      <p id="quote">"I love learning things by naturally feeling stuff whilst using minimal reference, for in this way I learn a thousands of ways to a fail and then finally choose the only way in which I would love to succeed."</p>
+    </div>
+    <div id="tech">
+      <div class="flex-row nopadding" style="padding: 16;">
+        <p>Technologies that I have played with months for</p>
+        <div><p class="goto">Skip to Timeline &darr;</p></div>
+      </div>
+
+      <div class="flex-row" style="background-color: powderblue;">
+        <img src="https://flutter.dev/assets/flutter-lockup-1caf6476beed76adec3c477586da54de6b552b2f42108ec5bc68dc63bae2df75.png" width="100%">
+        <p>Ever since I have started developing with it, I have fallen in love with this framework. Spending more than a year with it, I can unambiguously say that <b>Flutter</b> is the future and is surely here to stay. If you'll are unaware about it, then it's Google’s UI toolkit for building beautiful, natively compiled applications for mobile, web, and desktop from a single codebase (For more info head over to 
+            <a style="display: inline-block;" href="https://flutter.dev/" target="_blank">flutter.dev</a>). I have spent some time understanding how the framework works internally by diving deep into the source code and finding the most efficient way to do things and have done a confidential project with the help of it. I have been working on a very simple, yet powerful and efficient design pattern whose implementation is so simple that you'll probably never look back to any other design pattern while developing your next Flutter app :) (I'll soon be uploading it on <a href="https://github.com/MHShetty" target="_blank">GitHub</a>; once I am done with testing it).</p>
+      </div>
+
+      <div class="flex-row" style="background-color: lightgreen">
+        <p><b>Batch files?</b> You mean the same set of commands that are run by wrapping it in a file instead of running it line by line on the command line? Well, it is not just that. Batch files often seem like very simple lines of code (which is a essentially good thing) that do some minute tasks like starting a program or setting some envirnoment variables. But there is something more to it. A few lines of batch code can be used in heavily in automation where the time saved would be propotional to the number of devices that use that batch file (even that can be automated). From installing and running softwares on a infinite number of computers to scheduling tasks, batch file has always got you covered. Batch files are generally simple readable code, so you always can check what it's going to do under the hood or even optimize it. What else? Well written batch-files can act as cross-platform code, to save your time even more efficiently. Hmm..So what have I done with it? In the start of 2020, I had created a basic software with the help of a set of batch files that interfaced certain command to directly assemble, link and run (a set of) 16-bit assembly level programs just in a single command or click. Where can that be used? Well, in any educational institute that teaches it's students 16-bit assembly programming (it exists as a prescribed standard in a lot of countries).</p>
+        <img src="batch-file.jpg" width="100%">
+      </div>
+
+      <div class="flex-row" style="background-color: purple; color: white;">
+        <img src="web-d.png" width="100%"/>
+        <p>I have spent most of time in <span style="font-weight: 600;">web development</span> in two ways. One, by designing a simple website that displays musical goods (I tried hard to write it purely in HTML-CSS without directly using JS but ended up using it at the end to calculate the total amount and to generate a bill that could directly be sent to the shop owner for approval; My main goal was to create a website without using a server and JS and I didn't know how the internet or DBs worked back then...so 😅) via mail without actually using any server. I had a partially incomplete backup of it; so have uploaded it on <a>GitHub</a> (just in case if wanted to have a <a>peep</a>). And the other way in which I spent time with web development is through Node JS, where I actually came to know how the developers are expected to use the internet. I tried doing different things and seeing how every component on the internet reacts to the other when set in a specific way and still often do it, whenever I get time.</p>
+      </div>
+
+      <div class="flex-row" style="background-color: #b93d01; color: white;">
+        <p>Apart from the above mentioned frameworks and implementations, I have tried other technologies too but not to that extent that I could really share my experience with you'll. I had spent time trying to learn Android development for around a few months after I passed out from my school (where I had learnt the basics of Java by only writing program within the main function [Blue-J]) and had directly jumped to Android Studio. As most of you would have expected, I ended up in a complete disaster not really understanding what I was actually doing. Two years later, after learning Flutter and real Java, when I came back to native Android development for a while (while developing a Flutter app), everything seemed familiar and crystal clear for me and I was able write my own classes to create my own platform specific implementations for my Flutter app. <b>DOSBox</b> and <b>16-bit assembly programming</b> while might be irrelevant or something that shouldn't even be taught anywhere for most of you'll, had taught me on what basis do most of the operating systems that exist work today and eventually made me search more about Windows's 16-bit history and how the OS eventually moved to become a 32 and 64 bit system. Learning things this way gave me my own sweet memories had it's own value instead of just simply understanding it as a concept and moving ahead would otherwise have.</p>
+        <img src="others.png" width="100%"/>
+      </div>
+      <div id="">
+
+      </div>
+</body>
+<script>
+
+  // const colors = [32896,547229];
+
+  function onLoad(){
+    document.getElementById('header').addEventListener("click", headerClicked);
+  }
+
+  function headerClicked(evt){
+
+      var btn = document.getElementById("header-background");
+        var x = evt.pageX;
+        var y = evt.pageY;
+
+        var duration = 700;
+        var animationFrame, animationStart;
+  
+        var animationStep = function(timestamp) {
+        if (!animationStart) {
+          animationStart = timestamp;
+        }
+
+        var frame = timestamp - animationStart;
+        if (frame < duration) {
+
+        var easing = (frame/duration) * (2 - (frame/duration));
+        var circle = "circle at " + x + "px " + y + "px";
+        var color  = "rgba(0, 0, 0, " + (0.3 * (1 - easing)) + ")";
+        var stop   = 90 * easing + "%";
+
+    btn.style.backgroundImage = "radial-gradient(" + circle + ", " + color + " " + stop + ", transparent " +stop+")";
+        animationFrame = window.requestAnimationFrame(animationStep);
+     }
+     else {
+       btn.style.backgroundImage = "none";
+       window.cancelAnimationFrame(animationFrame);
+      }    
+    };
+     animationFrame = window.requestAnimationFrame(animationStep);
+
+  }
+</script>
+</html>
